@@ -3,10 +3,10 @@ import { config } from '../support/config';
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 
-Given('Go to the playwright website', async function (this: ICustomWorld) {
+Given('Go to the betsson website', async function (this: ICustomWorld) {
   const page = this.page!;
   await page.goto(config.BASE_URL);
-  await page.locator('nav >> a >> text="Playwright"').waitFor();
+  await page.locator('header >> a >> alt="Betsson"').waitFor();
 });
 
 When('Change theme to {string} mode', async function (this: ICustomWorld, mode: string) {
